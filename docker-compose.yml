@@ -1,5 +1,5 @@
 libvirt:
-  image: codepost/libvirt:latest
+  image: "image name"
 #  image: bbb:latest
   privileged: true
   volumes:
@@ -9,6 +9,5 @@ libvirt:
     - /sys/fs/cgroup:/sys/fs/cgroup:rw
     - /root/.ssh/authorized_keys:/root/.ssh/authorized_keys
   ports:
-    - "18731:22"
-#    - "22:22"
+    - "22:22"
   net: host
