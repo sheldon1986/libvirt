@@ -1,0 +1,14 @@
+libvirt:
+  image: codepost/libvirt:latest
+#  image: bbb:latest
+  privileged: true
+  volumes:
+    - /var/lib/nova/instances:/var/lib/nova/instances
+    - /lib/modules:/lib/modules
+    - /var/lib/libvirt/:/var/lib/libvirt
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    - /root/.ssh/authorized_keys:/root/.ssh/authorized_keys
+  ports:
+    - "18731:22"
+#    - "22:22"
+  net: host
