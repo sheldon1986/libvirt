@@ -36,7 +36,7 @@ echo '        "/dev/ptmx", "/dev/kvm", "/dev/kqemu",'>> /etc/libvirt/qemu.conf; 
 echo '        "/dev/rtc", "/dev/hpet", "/dev/net/tun",'>> /etc/libvirt/qemu.conf; \
 echo ']'>> /etc/libvirt/qemu.conf
 
-EXPOSE 18731
+EXPOSE 22
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/libvirtd","-l"]
