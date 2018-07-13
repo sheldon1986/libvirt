@@ -1,13 +1,13 @@
 #!/bin/bash
 
-bridge=br-metrom
+bridge="bridge_name"
 
 ## How to use maually
 ## bridge_gen.sh [IPADDR]
 
 
 ## Get IP address from the Environment variable -> $METROM_IP
-IP=$METROM_IP
+IP="server_IP"
 interface=`ip addr |grep $IP |awk -F " " '{print $NF}'`
 GW=`netstat -rn  |grep $interface |awk -F " " '{print $2}' |grep -v 0.0.0.0`
 bridge_chk=`brctl show |grep $bridge |wc -l`
